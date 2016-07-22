@@ -1,7 +1,13 @@
+*{
+    padding:0px !important;
+}
 body{
     font-family: 'Roboto Slab', serif;
     transition: all 0.5s ease;
     background-color:rgb(51, 51, 51);
+}
+#spazio{
+    margin-top:150px;
 }
 .pageTitle{
     margin-top:5px;
@@ -26,4 +32,55 @@ body{
     font-size:2.4em;
     padding:7px;
 }
+#coverImage{
+    padding-right:0px;
+}
+#coverTesto{
+    background-color:rgb(230, 230, 0);
+    margin:0px;
+    height:300px;
+    padding:10px !important;
+}
+#immagine{
+    background-position:center center;
+    background-size:cover;
+    background-color:black;
+    height:300px;
+    margin-right:0px;
+}
+.testo{
+    color:black;
+    font-size:26px;
+    padding-left:10px !important;
+    text-align: center;
+    font-weight: normal;
+    line-height: 36px;
+}
+.testo h2{
+    padding:10px !important;
+    margin-top:44px;
+    margin-bottom:10px;
+}
+.bottone{
+    padding-left:10px;
+    display:flex;
+    justify-content:center;
+}
+#btnCover{
+    background-color:rgb(230, 230, 0);
+    color:black;
+    border-radius:0px;
+    border:3px solid black;
+    font-size:18px;
+    font-weight: bold;
+    padding:15px 30px !important;
+    letter-spacing:2px;
+}
+#btnCover:hover{
+    background-color:black;
+    color:white;
+}
+
+
+
 
