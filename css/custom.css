@@ -9,7 +9,7 @@ body{
 #spazio{
     margin-top:150px;
 }
-.pageTitle{
+.pageTitle,.pageFooter{
     margin-top:5px;
     margin-bottom:0px;
     font-family: 'Open Sans', sans-serif;
@@ -18,7 +18,6 @@ body{
     font-weight: bold;
     color:black;
     background-color:rgb(230, 230, 0);
-    font-weigt:bold;
     text-align:center;
     padding:7px;
     border-bottom:0.2em solid rgb(179, 89, 0);
@@ -79,6 +78,18 @@ body{
 #btnCover:hover{
     background-color:black;
     color:white;
+}
+div h2.pageFooter{
+    margin-top:0px;
+    border-top:0.2em solid rgb(179, 89, 0);
+    border-bottom:none;
+}
+h2.pageFooter>small{
+   font-family: 'Open Sans', sans-serif;
+   font-size:14px;
+   letter-spacing:0.5px;
+   font-weight: bold; 
+   color:black;
 }
 
 
