@@ -1,3 +1,10 @@
+<?php
+session_start();
+//creare il vettore di risposte di sessione solo se non esiste già
+if (!$_SESSION["vettoreRisposte"]) {
+    $_SESSION["vettoreRisposte"] = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+}
+?>
 <!DOCTYPE html>
 <html lang="it">
     <head>
@@ -31,29 +38,28 @@
                         </div>
                     </div>
                     <!--./row intestazione Domanda -->
-                    <div class="row" id="duecolonne">
-                        <div class="col-xs-12 col-md-6" id="coverImage">
-                            <div id='immagine' style="background-image:url('img/psvita2.jpg');"></div>
-                        </div>
-                        <div class="col-xs-12 col-md-6" id="coverTesto">                           
-                            <div class="testo">
-                                <h2>Rispondi esattamente alle 10 domande e scoprilo</h2>
-                            </div>
-                            <div class="bottone">
-                                <button class="btn btn-default" id="btnCover">
-                                    INIZIA IL QUIZ
-                                </button> 
-                            </div>
-                        </div>
+                    <div class="row" id="risposteRow">
+                        <?php
+                        for ($i = 0; count($_SESSION["vettoreRisposte"]) < 10; $i++) {
+                            if ($_SESSION['vettoreRisposte'][$i] == 0) {
+                                ?>
+                                <div class="col-xs-1 risposta rispostaBase">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'giusto') { ?>
+                                <div class="col-xs-1 risposta rispostaCorretta">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'errato') { ?>
+                                <div class="col-xs-1 risposta rispostaErrata">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
                     </div>
                     <!-- ./row duecolonne -->
                     <div class="row">
-<<<<<<< HEAD
                         <div class="col-xs-12">                            
-=======
-                        <div class="col-xs-12">
-                            
->>>>>>> master
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>
                         </div>
                     </div>
@@ -67,3 +73,4 @@
         <script src="js/quiz-start.js"></script>
     </body>
 </html>
+
