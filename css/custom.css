@@ -28,7 +28,7 @@ body{
     border:12px solid rgb(245, 243, 246);
     text-align:center;
     font-weight: bold;
-    font-size:2.4em;
+    font-size:25px;
     padding:7px;
 }
 #coverImage{
@@ -80,6 +80,7 @@ body{
     color:white;
 }
 div h2.pageFooter{
+    background-color:black;
     margin-top:0px;
     border-top:0.2em solid rgb(179, 89, 0);
     border-bottom:none;
@@ -89,7 +90,7 @@ h2.pageFooter>small{
    font-size:14px;
    letter-spacing:0.5px;
    font-weight: bold; 
-   color:black;
+   color:white;
 }
 /* DOMANDA.PHP */
 #risposteRow{
@@ -98,6 +99,30 @@ h2.pageFooter>small{
     font-family:'Roboto Slan',serif;
     flex-direction:row;
     justify-content: center;
+    padding:15px 30px !important;
+}
+.risposta{
+    border-radius:50%;
+    text-align:center;
+    vertical-align: middle;
+    width:30px;
+    height:30px;
+    margin:auto;
+    line-height: 25px;
+}
+.rispostaBase{
+    border:2px solid white;
+    color:white;
+}
+.rispostaCorretta{
+    border:2px solid rgb(51, 204, 0);
+    color:white;
+    background-color:rgb(51, 204, 0);
+}
+.rispostaErrata{
+    border:2px solid red;
+    color:white;
+    background-color:red;
 }
 /* ./DOMANDA.PHP */
 

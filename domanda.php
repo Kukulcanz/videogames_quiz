@@ -40,22 +40,25 @@ if (!$_SESSION["vettoreRisposte"]) {
                     <!--./row intestazione Domanda -->
                     <div class="row" id="risposteRow">
                         <?php
-                        for ($i = 0; count($_SESSION["vettoreRisposte"]) < 10; $i++) {
-                            if ($_SESSION['vettoreRisposte'][$i] == 0) {
+                        $i=0;
+                        foreach($_SESSION['vettoreRisposte'] as $risposta) {                          
+                            if ($risposta === 0) {
                                 ?>
                                 <div class="col-xs-1 risposta rispostaBase">
-                                    <?php echo $i; ?>
+                                    <?php echo $i+1; ?>
                                 </div>
-                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'giusto') { ?>
+                            <?php } else if ($risposta === "giusto") { ?>
                                 <div class="col-xs-1 risposta rispostaCorretta">
-                                    <?php echo $i; ?>
+                                    <?php echo $i+1; ?>
                                 </div>
-                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'errato') { ?>
+                            <?php } else if ($risposta === "errato") { ?>
                                 <div class="col-xs-1 risposta rispostaErrata">
-                                    <?php echo $i; ?>
+                                    <?php echo $i+1; ?>
                                 </div>
                             <?php } ?>
-                        <?php } ?>
+                        <?php 
+                            $i++;
+                            } ?>
                     </div>
                     <!-- ./row duecolonne -->
                     <div class="row">
@@ -63,6 +66,7 @@ if (!$_SESSION["vettoreRisposte"]) {
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <!-- ./row allTest -->
