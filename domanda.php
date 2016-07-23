@@ -1,11 +1,9 @@
 <?php
 session_start();
 //creare il vettore di risposte di sessione solo se non esiste già
-if(!$_SESSION["vettoreRisposte"]){
-    $_SESSION["vettoreRisposte"] = array(0,0,0,0,0,0,0,0,0,0);
+if (!$_SESSION["vettoreRisposte"]) {
+    $_SESSION["vettoreRisposte"] = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -41,15 +39,22 @@ if(!$_SESSION["vettoreRisposte"]){
                     </div>
                     <!--./row intestazione Domanda -->
                     <div class="row" id="risposteRow">
-                        <?php for( $i=0 ; count($_SESSION["vettoreRisposte"])<10 ;$i++ ){ 
-                        if($_SESSION['vettoreRisposte'][$i] == 0){ ?>
-                        <div class="col-xs-1 risposta rispostaBase">
-                            <?php echo $i; ?>
-                        </div>
-                        <?php }else if($_SESSION['vettoreRisposte'][$i]=='giusto'){ ?>
-                        <div class="col-xs-1 risposta rispostaCorretta">
-                            <?php echo $i; ?>
-                        </div>
+                        <?php
+                        for ($i = 0; count($_SESSION["vettoreRisposte"]) < 10; $i++) {
+                            if ($_SESSION['vettoreRisposte'][$i] == 0) {
+                                ?>
+                                <div class="col-xs-1 risposta rispostaBase">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'giusto') { ?>
+                                <div class="col-xs-1 risposta rispostaCorretta">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } else if ($_SESSION['vettoreRisposte'][$i] == 'errato') { ?>
+                                <div class="col-xs-1 risposta rispostaErrata">
+                                    <?php echo $i; ?>
+                                </div>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                     <!-- ./row duecolonne -->
