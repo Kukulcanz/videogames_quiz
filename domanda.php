@@ -42,19 +42,21 @@ $domanda = seleziona_domanda();
                         $i = 0;
                         foreach ($_SESSION['vettoreRisposte'] as $risposta) {
                             $classePlus;
-                            $classePlus2='';
-                            if($risposta === 0 )
+                            $classePlus2 = '';
+                            if ($risposta === 0)
                                 $classePlus = 'rispostaBase';
-                            else if($risposta === 'giusto')
+                            else if ($risposta === 'giusto')
                                 $classePlus = 'rispostaCorretta';
-                            else if($risposta === 'errato')
+                            else if ($risposta === 'errato')
                                 $classePlus = 'rispostaErrata';
-                            
-                            if( ($domanda['dom_ordine']-1)=== $i )
-                                $classePlus2='rispostaAttuale';
+
+                            if (($domanda['dom_ordine'] - 1) === $i)
+                                $classePlus2 = 'rispostaAttuale';
                             ?>                          
-                            <div class="col-xs-1 risposta <?php echo $classePlus.' '; echo $classePlus2; ?>">
-                                <?php echo $i + 1; ?>
+                            <div class="col-xs-1 risposta <?php echo $classePlus . ' ';
+                        echo $classePlus2;
+                            ?>">
+                            <?php echo $i + 1; ?>
                             </div> 
                             <?php
                             $i++;
@@ -70,12 +72,39 @@ $domanda = seleziona_domanda();
                             <h3><?php echo $domanda['dom_testo']; ?></h2>
                         </div>
                     </div>
+                    <div class='row divisor'></div>
+                    <section class='risposteContainer'>
+                        <div class='row'>
+                            <div class='col-xs-9 testoRisposta'>
+                                <span><?php echo $domanda['dom_risposta1']; ?></span>
+                            </div>
+                            <div class='col-xs-3 bottoneRisposta'>
+                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-xs-9 testoRisposta'>
+                                <span><?php echo $domanda['dom_risposta2']; ?></span>
+                            </div>
+                            <div class='col-xs-3 bottoneRisposta'>
+                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-xs-9 testoRisposta'>
+                                <span><?php echo $domanda['dom_risposta3']; ?></span>
+                            </div>
+                            <div class='col-xs-3 bottoneRisposta'>
+                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                            </div>
+                        </div>
+                    </section>
                     <div class="row">
                         <div class="col-xs-12">                            
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <!-- ./row allTest -->
@@ -83,7 +112,7 @@ $domanda = seleziona_domanda();
         <!-- inclusione file -->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/quiz-start.js"></script>
+        <script src="js/row-hover.js"></script>
     </body>
 </html>
 

@@ -140,7 +140,7 @@ h2.pageFooter>small{
     vertical-align:middle;
     font-family:"Roboto Slab",sans-serif;
     font-size:40px;
-    height:100px;
+    height:120px;
 }
 .testoDomanda{
     display:flex;
@@ -149,7 +149,7 @@ h2.pageFooter>small{
     background-color:rgb(230, 230, 0);
     color:black;
     padding-left:10px !important;
-    height:100px;
+    height:120px;
 }
 .testoDomanda h3{
     margin:0px;
@@ -158,6 +158,46 @@ h2.pageFooter>small{
 }
 .testoDomanda h3::first-letter{
     text-transform:capitalize;
+}
+div.divisor{
+    border-top:2px solid rgb(179, 89, 0);
+}
+.risposteContainer>div.row{
+    background-color:black;
+    color:white;
+    border-top:1px solid rgba(240, 240, 245,0.3);
+    border-bottom:1px solid rgba(240, 240, 245,0.3);
+}
+.risposteContainer>div.row>div.testoRisposta{
+    text-align:left;
+    font-family:'Roboto Slab',sans-serif;
+    font-size:22px;
+    padding:15px 0px 15px 45px !important;
+    height:93px;
+}
+.risposteContainer>div.row>div.bottoneRisposta{  
+    font-size:22px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding:15px 50px 15px 0px !important;
+}
+.btnTestoBianco{
+    border:3px solid rgba(240, 240, 245,0.3);
+    border-radius:10px;
+    background-color:inherit;
+    color:white;
+    font-size:18px;
+    font-weight: bold;
+    padding:15px 40px !important;
+    text-transform:uppercase;
+}
+.risposteContainer>div.row:hover{
+    background-color:rgb(230, 230, 0) !important;
+    color:black;
+}
+.btnTestoBianco:hover{
+    background-color:rgb(230, 230, 0);
 }
 /* ./DOMANDA.PHP */
 
