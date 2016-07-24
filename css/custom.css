@@ -124,21 +124,32 @@ h2.pageFooter>small{
     color:white;
     background-color:red;
 }
+.rispostaAttuale{
+    border:2px solid white;
+    color:black;
+    font-weight: bold;
+    background-color:white;
+}
 .numerazioneDomanda{
-    background-color:black;
-    color:white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color:rgb(255, 128, 0);
+    color:black;
     text-align:center;
     vertical-align:middle;
     font-family:"Roboto Slab",sans-serif;
     font-size:40px;
-    height:140px;
-    padding:35px 15px !important;
+    height:100px;
 }
 .testoDomanda{
+    display:flex;
+    justify-content:center;
+    align-items: center;
     background-color:rgb(230, 230, 0);
     color:black;
-    padding:20px 10px !important;
-    height:140px;
+    padding-left:10px !important;
+    height:100px;
 }
 .testoDomanda h3{
     margin:0px;

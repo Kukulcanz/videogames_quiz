@@ -42,15 +42,18 @@ $domanda = seleziona_domanda();
                         $i = 0;
                         foreach ($_SESSION['vettoreRisposte'] as $risposta) {
                             $classePlus;
-                            
+                            $classePlus2='';
                             if($risposta === 0 )
                                 $classePlus = 'rispostaBase';
                             else if($risposta === 'giusto')
                                 $classePlus = 'rispostaCorretta';
                             else if($risposta === 'errato')
                                 $classePlus = 'rispostaErrata';
+                            
+                            if( ($domanda['dom_ordine']-1)=== $i )
+                                $classePlus2='rispostaAttuale';
                             ?>                          
-                            <div class="col-xs-1 risposta <?php echo $classePlus; ?>">
+                            <div class="col-xs-1 risposta <?php echo $classePlus.' '; echo $classePlus2; ?>">
                                 <?php echo $i + 1; ?>
                             </div> 
                             <?php
@@ -59,11 +62,11 @@ $domanda = seleziona_domanda();
                         ?>
                     </div>
                     <!-- ./row duecolonne -->
-                    <div class='row'>
-                        <div class='col-xs-3 col-sm-1 numerazioneDomanda'>
-                            <?php echo $domanda['dom_ordine']; ?>
+                    <div class='row domandaContainer'>
+                        <div class='col-xs-2 col-sm-1 numerazioneDomanda'>
+                            <span><?php echo $domanda['dom_ordine']; ?></span>
                         </div>
-                        <div class='col-xs-9 col-sm-11 testoDomanda'>
+                        <div class='col-xs-10 col-sm-11 testoDomanda'>
                             <h3><?php echo $domanda['dom_testo']; ?></h2>
                         </div>
                     </div>
