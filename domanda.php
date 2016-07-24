@@ -1,9 +1,7 @@
 <?php
 session_start();
-//creare il vettore di risposte di sessione solo se non esiste già
-if (!$_SESSION["vettoreRisposte"]) {
-    $_SESSION["vettoreRisposte"] = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="it">
