@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -38,25 +36,24 @@ session_start();
                     <!--./row intestazione Domanda -->
                     <div class="row" id="risposteRow">
                         <?php
-                        $i=0;
-                        foreach($_SESSION['vettoreRisposte'] as $risposta) {                          
-                            if ($risposta === 0) {
-                                ?>
-                                <div class="col-xs-1 risposta rispostaBase">
-                                    <?php echo $i+1; ?>
-                                </div>
-                            <?php } else if ($risposta === "giusto") { ?>
-                                <div class="col-xs-1 risposta rispostaCorretta">
-                                    <?php echo $i+1; ?>
-                                </div>
-                            <?php } else if ($risposta === "errato") { ?>
-                                <div class="col-xs-1 risposta rispostaErrata">
-                                    <?php echo $i+1; ?>
-                                </div>
-                            <?php } ?>
-                        <?php 
+                        $i = 0;
+                        foreach ($_SESSION['vettoreRisposte'] as $risposta) {
+                            $classePlus;
+                            
+                            if($risposta === 0 )
+                                $classePlus = 'rispostaBase';
+                            else if($risposta === 'giusto')
+                                $classePlus = 'rispostaCorretta';
+                            else if($risposta === 'errato')
+                                $classePlus = 'rispostaErrata';
+                            ?>                          
+                            <div class="col-xs-1 risposta <?php echo $classePlus; ?>">
+                                <?php echo $i + 1; ?>
+                            </div> 
+                            <?php
                             $i++;
-                            } ?>
+                        }
+                        ?>
                     </div>
                     <!-- ./row duecolonne -->
                     <div class="row">
@@ -64,7 +61,7 @@ session_start();
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <!-- ./row allTest -->
