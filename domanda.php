@@ -1,5 +1,8 @@
 <?php
 session_start();
+include('inc/functions.php');
+
+$domanda = seleziona_domanda();
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -61,7 +64,7 @@ session_start();
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>
                         </div>
                     </div>
-
+                    
                 </div>
             </div>
             <!-- ./row allTest -->
