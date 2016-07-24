@@ -59,6 +59,14 @@ $domanda = seleziona_domanda();
                         ?>
                     </div>
                     <!-- ./row duecolonne -->
+                    <div class='row'>
+                        <div class='col-xs-3 col-sm-1 numerazioneDomanda'>
+                            <?php echo $domanda['dom_ordine']; ?>
+                        </div>
+                        <div class='col-xs-9 col-sm-11 testoDomanda'>
+                            <h3><?php echo $domanda['dom_testo']; ?></h2>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-xs-12">                            
                             <h2 class="pageFooter"><small>&copy;SIMONE CAVALLI</small></h2>

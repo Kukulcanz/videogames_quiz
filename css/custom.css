@@ -124,6 +124,30 @@ h2.pageFooter>small{
     color:white;
     background-color:red;
 }
+.numerazioneDomanda{
+    background-color:black;
+    color:white;
+    text-align:center;
+    vertical-align:middle;
+    font-family:"Roboto Slab",sans-serif;
+    font-size:40px;
+    height:140px;
+    padding:35px 15px !important;
+}
+.testoDomanda{
+    background-color:rgb(230, 230, 0);
+    color:black;
+    padding:20px 10px !important;
+    height:140px;
+}
+.testoDomanda h3{
+    margin:0px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size:24px;
+}
+.testoDomanda h3::first-letter{
+    text-transform:capitalize;
+}
 /* ./DOMANDA.PHP */
 
 
