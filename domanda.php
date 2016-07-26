@@ -1,14 +1,17 @@
 <?php
 session_start();
 include('inc/functions.php');
+header('Content-type: text/html; charset=UTF-8');
 
 $domanda = seleziona_domanda();
 ?>
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <meta charset="UTF-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="Content-language" content="it" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Kuku Quiz</title>
         <!-- CSS -->

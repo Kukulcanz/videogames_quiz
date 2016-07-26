@@ -23,14 +23,14 @@ function rispondi(valore_risposta, id_domanda,currentElement) {
                 currentElement.css('backgroundColor','rgb(51, 204, 0)');
                 window.setTimeout(function () {
                     location.reload();
-                }, 3000);
+                }, 3500);
             } else {
                 //risposta data errata ; colorare di rosso la riga e dopo x secondi passare alla prossima domanda
                 currentElement.closest('.row').css('backgroundColor','red');
                 currentElement.css('backgroundColor','red');
                 window.setTimeout(function () {
                     location.reload();
-                }, 3000);
+                }, 3500);
             }
         },
         error: function (risposta) {

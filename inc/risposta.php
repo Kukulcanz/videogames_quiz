@@ -32,7 +32,6 @@ if( $rispostaPassata === $domandaAttuale['dom_corretta']){
     //nell'array di sessione relativo alle risposta cambio il valore associato alla domanda attuale in 'errato'
     echo json_encode('errata');
 }
-    
-?>
+
 
 
