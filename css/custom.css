@@ -193,7 +193,7 @@ div.divisor{
     text-transform:uppercase;
 }
 .risposteContainer>div.row:hover{
-    background-color:rgb(230, 230, 0) !important;
+    background-color:rgb(230, 230, 0);
     color:black;
 }
 .btnTestoBianco:hover{

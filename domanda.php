@@ -79,7 +79,7 @@ $domanda = seleziona_domanda();
                                 <span><?php echo $domanda['dom_risposta1']; ?></span>
                             </div>
                             <div class='col-xs-3 bottoneRisposta'>
-                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                                <button class='btn btn-default btnTestoBianco' type='button' onclick='rispondi(1,<?php echo $domanda['dom_id'];?>,$(this))'>Scegli</button>
                             </div>
                         </div>
                         <div class='row'>
@@ -87,7 +87,7 @@ $domanda = seleziona_domanda();
                                 <span><?php echo $domanda['dom_risposta2']; ?></span>
                             </div>
                             <div class='col-xs-3 bottoneRisposta'>
-                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                                <button class='btn btn-default btnTestoBianco' type='button' onclick='rispondi(2,<?php echo $domanda['dom_id'];?>,$(this))'>Scegli</button>
                             </div>
                         </div>
                         <div class='row'>
@@ -95,7 +95,7 @@ $domanda = seleziona_domanda();
                                 <span><?php echo $domanda['dom_risposta3']; ?></span>
                             </div>
                             <div class='col-xs-3 bottoneRisposta'>
-                                <button class='btn btn-default btnTestoBianco'>Scegli</button>
+                                <button class='btn btn-default btnTestoBianco' type='button' onclick='rispondi(3,<?php echo $domanda['dom_id'];?>,$(this))'>Scegli</button>
                             </div>
                         </div>
                     </section>
@@ -113,6 +113,7 @@ $domanda = seleziona_domanda();
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <script src="js/row-hover.js"></script>
+        <script src='js/script-risposta.js'></script>
     </body>
 </html>
 
